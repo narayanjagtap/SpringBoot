@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Profile</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>🚀 Hello, <i><b><span th:text="${modelName}"></span>! </b> </i>Welcome to Your Dashboard 🎉 Bhavaa</h1>
+	<br>
+	<a th:href="@{/logout}"> Logout </a>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>register page</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+	<h1>Register Now</h1>
+
+	<div th:if="${successMsg}">
+		<h3 style="color: green;" th:text="${successMsg}"></h3>
+	</div>
+
+	<div th:if="${errorMsg}">
+		<h3 style="color: red;" th:text="${errorMsg}"></h3>
+	</div>
+	
+	 <!-- Registration Form -->
+    <form th:action="@{/regForm}" th:object="${user}" method="post">
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" placeholder="Enter your full name" required>
+        <br><br>
+
+        <label>Email Id:</label>
+        <input type="email" th:field="*{email}" placeholder="Enter your email" required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" th:field="*{password}" placeholder="Enter a strong password" required>
+        <br><br>
+
+        <label>Phone No:</label>
+        <input type="text" th:field="*{phoneno}" placeholder="Enter your phone number">
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+	
+	
+	<br><br>
+	<a href="index.html">Home</a>	<!-- Static page we can call directlly -->
+	&nbsp;&nbsp;
+	<a href="loginPage">Login</a>	<!-- but dinamic pages can not call directally -->
+	
+</body>
+</html>

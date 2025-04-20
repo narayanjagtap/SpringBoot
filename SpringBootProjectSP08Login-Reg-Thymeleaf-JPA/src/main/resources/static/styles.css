@@ -1,0 +1,10 @@
+@charset "UTF-8";
+    body{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serifa;
+        font-weight: bold;
+
+        border: 2px solid black;
+        padding: 20px;
+        width: 350px;
+        margin: 50px auto;
+    }
